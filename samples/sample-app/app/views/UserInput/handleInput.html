@@ -1,0 +1,15 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{form @UserInput.handleInput()}
+    <fieldset>
+        <legend>Title</legend>
+        #{field 'customerId'}
+            <label for="${field.id}">Customer id:</label> <input type="text" name="${field.name}" id="${field.id}"/><br />
+        #{/field}
+        #{field 'campaignCode'}
+            <label for="${field.id}">Campaign code:</label> <input type="text" name="${field.name}" id="${field.id}"/><br />
+        #{/field}
+        <input type="submit" value="OK">
+    </fieldset>
+#{/form}
